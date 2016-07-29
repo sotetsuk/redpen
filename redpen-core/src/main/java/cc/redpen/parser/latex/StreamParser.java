@@ -131,7 +131,7 @@ public class StreamParser {
             final List<Token> o = new ArrayList<>();
             final Deque<Token> q = new ArrayDeque<>(tokens);
             final Pattern interests = Pattern.compile("(?:caption|part|(?:sub)*(chapter|section|paragraph)|item|title)\\*?");
-            final Pattern ignores = Pattern.compile(".?(?:space|fill)\\*?|phantom|documentclass|usepackage|author|date|label|ref|cite|citet|citep|citeauthor|eqref|url|biblio.*|includegraphics");
+            final Pattern ignores = Pattern.compile(".?(?:space|fill)\\*?|phantom|documentclass|usepackage|author|date|label|ref|cite|citet|citep|citeauthor|eqref|url|transtodo|transfootnote|myfootnote|biblio.*|includegraphics");
             try {
                 while (true) {
                     final Token t = q.removeFirst();
